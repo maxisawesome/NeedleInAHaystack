@@ -1,4 +1,6 @@
 import sys
+
+import numpy
 from run import get_model_to_test,get_evaluator, CommandArgs
 from llm_needle_haystack_tester import LLMNeedleHaystackTester
 from llm_multi_needle_haystack_tester import LLMMultiNeedleHaystackTester
@@ -38,8 +40,8 @@ def main():
     model_names = set(m['model_name'] for m in yaml_cfg['models'])
     max_tokens = yaml_cfg['max_context_length']
     experiment_cfg = {
-        "context_lengths": [range(1000, max_tokens, 25)],
-        "document_depth_percents": list(range(0, 100, 2.5)),
+        "context_lengths": list(range(1000, max_tokens, 2000)),
+        "document_depth_percents": list(numpy.linspace(0, 100, num=20)),
     }
 
     models = filter(

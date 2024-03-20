@@ -1,14 +1,12 @@
 max_context_length: 30000
 tasks:
 -
-  needle: "Let x = sqrt(25)."
-  retrieval_question: "What is the value of x?"
--
   needle: "The best thing to do in San Francisco is eat a sandwich and sit in Dolores Park on a sunny day."
   retrieval_question: "What is the best thing to do in San Francisco?"
 -
   needle: "The special magic New York number is 7897."
   retrieval_question: "What is the magic number?"
+  answer: "7897"
 -
   needle: "Figs are one of the secret ingredients needed to build the perfect pizza."
   retrieval_question: "What is one of the secret ingredients to build the perfect pizza?"
@@ -18,6 +16,7 @@ tasks:
 -
   needle: "This essay is derived from a guest lecture in Sam Altman's startup class."
   retrieval_question: "Whose startup class was the guest lecture in?"
+  answer: "Sam Altman's"
 
 models:
 -

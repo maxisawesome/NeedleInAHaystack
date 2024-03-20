@@ -23,6 +23,7 @@ class CommandArgs():
     use_messages_api: bool = False
     evaluator_model_name: Optional[str] = "gpt-3.5-turbo-0125"
     needle: Optional[str] = "\nThe best thing to do in San Francisco is eat a sandwich and sit in Dolores Park on a sunny day.\n"
+    answer: Optional[str] = None
     haystack_dir: Optional[str] = "PaulGrahamEssays"
     retrieval_question: Optional[str] = "What is the best thing to do in San Francisco?"
     results_version: Optional[int] = 1
@@ -100,7 +101,7 @@ def get_evaluator(args: CommandArgs) -> Evaluator:
         case "openai":
             return OpenAIEvaluator(model_name=args.evaluator_model_name,
                                    question_asked=args.retrieval_question,
-                                   true_answer=args.needle)
+                                   true_answer=args.answer if args.answer is not None else args.needle)
         case "langsmith":
             return LangSmithEvaluator()
         case _:
