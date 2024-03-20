@@ -20,31 +20,31 @@ tasks = [
         "needle": "Let x = sqrt(25).",
         "retrieval_question": "What is the value of x?",
     },
-    {
-        "needle": "The best thing to do in San Francisco is eat a sandwich and sit in Dolores Park on a sunny day.",
-        "retrieval_question": "What is the best thing to do in San Francisco?",
-    },
-    {
-        "needle": "The special magic New York number is 7897.",
-        "retrieval_question": "What is the magic number?",
-    },
-    {
-        "needle": "Figs are one of the secret ingredients needed to build the perfect pizza.",
-        "retrieval_question": "What is one of the secret ingredients to build the perfect pizza?",
-    },
-    {
-        "needle": "Jeremy Dohmann's birthday is 11/14/1997",
-        "retrieval_question": "What is Jeremy Dohmann's birthday?",
-    },
-    {
-        "needle": "This essay is derived from a guest lecture in Sam Altman's startup class.",
-        "retrieval_question": "Whose startup class was the guest lecture in?"
-    }
+    # {
+    #     "needle": "The best thing to do in San Francisco is eat a sandwich and sit in Dolores Park on a sunny day.",
+    #     "retrieval_question": "What is the best thing to do in San Francisco?",
+    # },
+    # {
+    #     "needle": "The special magic New York number is 7897.",
+    #     "retrieval_question": "What is the magic number?",
+    # },
+    # {
+    #     "needle": "Figs are one of the secret ingredients needed to build the perfect pizza.",
+    #     "retrieval_question": "What is one of the secret ingredients to build the perfect pizza?",
+    # },
+    # {
+    #     "needle": "Jeremy Dohmann's birthday is 11/14/1997",
+    #     "retrieval_question": "What is Jeremy Dohmann's birthday?",
+    # },
+    # {
+    #     "needle": "This essay is derived from a guest lecture in Sam Altman's startup class.",
+    #     "retrieval_question": "Whose startup class was the guest lecture in?"
+    # }
 ]
 
 
 
-MAX_TOKENS = 30_000
+MAX_TOKENS = 1_000
 MODELS = [
     # {
     #     'provider': 'anthropic',
@@ -126,7 +126,7 @@ def main():
     """
 
     experiment_cfg = {
-        "context_lengths": [30_000],
+        "context_lengths": [MAX_TOKENS],
         "document_depth_percents": list(range(0, 2, 2)),
     }
             
