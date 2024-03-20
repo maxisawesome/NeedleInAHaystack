@@ -36,7 +36,7 @@ def main():
         yaml_cfg = om.load(f)
     tasks = yaml_cfg['tasks']
     model_names = set(m['model_name'] for m in yaml_cfg['models'])
-    max_tokens = yaml_cfg['max_tokens']
+    max_tokens = yaml_cfg['max_context_length']
     experiment_cfg = {
         "context_lengths": [range(1000, max_tokens, 25)],
         "document_depth_percents": list(range(0, 100, 2.5)),
