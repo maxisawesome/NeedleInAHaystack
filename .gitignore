@@ -9,7 +9,7 @@ __pycache__/
 
 # C extensions
 *.so
-*.yaml
+mcli-eval.yaml
 # Distribution / packaging
 .Python
 build/
