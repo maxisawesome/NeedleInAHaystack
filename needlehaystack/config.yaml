@@ -1,3 +1,4 @@
+max_context_length: 30000
 tasks:
 -
   needle: "Let x = sqrt(25)."
@@ -19,6 +20,8 @@ tasks:
   retrieval_question: "Whose startup class was the guest lecture in?"
 
 models:
+-
+  model_name: "models/gemini-1.0-pro-latest"
 -
   model_name: "claude-3-opus-20240229"
 -

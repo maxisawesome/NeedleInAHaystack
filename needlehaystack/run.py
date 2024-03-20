@@ -7,7 +7,7 @@ from jsonargparse import CLI
 from llm_needle_haystack_tester import LLMNeedleHaystackTester
 from llm_multi_needle_haystack_tester import LLMMultiNeedleHaystackTester
 from evaluators import Evaluator, LangSmithEvaluator, OpenAIEvaluator
-from providers import Anthropic, ModelProvider, OpenAI, MosaicML
+from providers import Anthropic, ModelProvider, OpenAI, MosaicML, Gemini
 
 load_dotenv()
 
@@ -76,6 +76,10 @@ def get_model_to_test(args: CommandArgs) -> ModelProvider:
                             tokenizer_name=args.tokenizer_name,
                             base_url=args.base_url,
                             api_key=args.api_key)
+        case "gemini":
+            return Gemini(
+                model_name=args.model_name, api_key=args.api_key
+            )
         case _:
             raise ValueError(f"Invalid provider: {args.provider}")
 

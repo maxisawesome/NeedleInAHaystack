@@ -19,18 +19,9 @@ def dep(name):
 
 
 
-MAX_TOKENS = 1_000
 
 
-"""
-pip install git+https://github.com/mosaicml/llm-foundry.git@openai_compatible_gauntlet
-pip uninstall mosaicml -y
-pip install git+https://github.com/mosaicml/composer.git@dev
-python3 run.py --provider mosaicml --model_name "mistralai/Mixtral-8x7B-Instruct-v0.1" \
---base_url https://mixtral-8x7b-instruct-at-trtllm-newimg-lorxa5.inf.hosted-on.mosaicml.hosting/v2 \
---local false \
---tokenizer_name mistralai/Mixtral-8x7B-Instruct-v0.1 \
-"""
+
 def main():
     """
     The main function to execute the testing process based on command line arguments.
@@ -45,14 +36,21 @@ def main():
         yaml_cfg = om.load(f)
     tasks = yaml_cfg['tasks']
     model_names = set(m['model_name'] for m in yaml_cfg['models'])
+    max_tokens = yaml_cfg['max_tokens']
     experiment_cfg = {
-        "context_lengths": [MAX_TOKENS],
-        "document_depth_percents": list(range(0, 2, 2)),
+        "context_lengths": [range(1000, max_tokens, 25)],
+        "document_depth_percents": list(range(0, 100, 2.5)),
     }
 
     models = filter(
         lambda d: d['model_name'] in model_names,
         [
+            {
+                'provider': 'gemini',
+                'model_name': "models/gemini-1.0-pro-latest",
+                'output_directory': "results/gemini/gemini-1.0-pro-latest",
+                'api_key': os.environ.get('GEMINI_API_KEY', ''),
+            },
             {
                 'provider': 'anthropic',
                 'model_name': "claude-3-opus-20240229",
