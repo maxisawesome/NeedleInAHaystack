@@ -143,7 +143,7 @@ def main():
         run_viz(
             model_cfg['output_directory'],
             model_cfg['model_name'].split('/')[-1],
-            max(experiment_cfg['context_lengths'])
+            experiment_cfg['context_lengths_max']
         )
 
 if __name__ == "__main__":
