@@ -1,4 +1,4 @@
-context_lengths_min: 1000
+context_lengths_min: 5000
 context_lengths_max: 30_000
 context_lengths_num_intervals: 15
 document_depth_percent_min: 0
@@ -34,11 +34,11 @@ models:
 #   model_name: "claude-3-haiku-20240307"
 # -
 #   model_name: "gpt-4-turbo-preview"
-# -
-#   model_name: "mosaicml/pi-ift-v1"
+-
+  model_name: "mosaicml/pi-ift-v1"
 # -
 #   model_name: "gpt-3.5-turbo"
 # -
 #   model_name: "mistralai/Mistral-large"
--
-  model_name: "mistralai/Mixtral-8x7B-Instruct-v0.1"
+# -
+#   model_name: "mistralai/Mixtral-8x7B-Instruct-v0.1"

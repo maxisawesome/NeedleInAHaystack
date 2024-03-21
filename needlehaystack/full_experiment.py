@@ -86,7 +86,7 @@ def main():
             {
                 'provider': 'mosaicml',
                 'model_name': "mosaicml/pi-ift-v1",
-                'base_url': 'https://pi-eve6-2mt2b-2e6-5ep-c4t4xg.inf.hosted-on.mosaicml.hosting/v2',
+                'base_url': 'https://pi-eve6-2mt2bncm-valfull-lb2-32k-mz9p3n.inf.hosted-on.mosaicml.hosting/v2',
                 'local': False,
                 'tokenizer_name': 'mosaicml/mpt-7b',
                 'output_directory': "results/mosaicml/pi-ift-v1"
