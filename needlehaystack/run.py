@@ -41,7 +41,7 @@ class CommandArgs():
     save_contexts: Optional[bool] = False
     final_context_length_buffer: Optional[int] = 200
     seconds_to_sleep_between_completions: Optional[float] = None
-    print_ongoing_status: Optional[bool] = False
+    print_ongoing_status: Optional[bool] = True
     output_directory: str = 'results'
     # LangSmith parameters
     eval_set: Optional[str] = "multi-needle-eval-pizza-3"

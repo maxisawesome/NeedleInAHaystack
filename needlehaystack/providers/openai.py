@@ -44,9 +44,9 @@ class MosaicML(ModelProvider):
         }
         self.model_name = model_name
         if api_key is None:
-            api_key = os.getenv('NIAH_MODEL_API_KEY')
+            api_key = os.getenv('OPENAI_API_KEY')
         if (not api_key):
-            raise ValueError("NIAH_MODEL_API_KEY must be in env.")
+            raise ValueError("OPENAI_API_KEY must be in env.")
         
 
         self.tokenizer = AutoTokenizer.from_pretrained(tokenizer_name)

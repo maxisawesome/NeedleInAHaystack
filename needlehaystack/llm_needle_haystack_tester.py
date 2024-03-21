@@ -140,8 +140,11 @@ class LLMNeedleHaystackTester:
     async def evaluate_and_log(self, context_length, depth_percent):
         # Checks to see if you've already checked a length/percent/version.
         # This helps if the program stop running and you want to restart later
+        context_file_location = f'{self.output_directory}/{self.model_name.replace(".", "_").replace("/", "_")}_len_{context_length}_depth_{int(depth_percent*100)}_v{self.results_version}'
+
         if self.save_results:
-            if self.result_exists(context_length, depth_percent):
+            if self.result_exists(context_file_location, context_length, depth_percent, self.needle):
+                print(f"Found cached results in {context_file_location}")
                 return
 
         # Go generate the required length context and place your needle statement in
@@ -207,24 +210,19 @@ class LLMNeedleHaystackTester:
         if self.seconds_to_sleep_between_completions:
             await asyncio.sleep(self.seconds_to_sleep_between_completions)
 
-    def result_exists(self, context_length, depth_percent):
+    def result_exists(self, context_file_location, context_length, depth_percent, needle):
         """
         Checks to see if a result has already been evaluated or not
         """
-
-        results_dir = 'results/'
-        if not os.path.exists(results_dir):
+        if not os.path.exists(context_file_location + '_results.json'):
             return False
-        
-        for filename in os.listdir(results_dir):
-            if filename.endswith('.json'):
-                with open(os.path.join(results_dir, filename), 'r') as f:
+        with open(context_file_location + '_results.json', 'r') as f:
                     result = json.load(f)
                     context_length_met = result['context_length'] == context_length
                     depth_percent_met = result['depth_percent'] == depth_percent
-                    version_met = result.get('version', 1) == self.results_version
+                    needle_met = result['needle'] == needle
                     model_met = result['model'] == self.model_name
-                    if context_length_met and depth_percent_met and version_met and model_met:
+                    if context_length_met and depth_percent_met and model_met and needle_met:
                         return True
         return False
 
