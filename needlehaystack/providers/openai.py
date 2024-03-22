@@ -50,7 +50,8 @@ class MosaicML(ModelProvider):
         
 
         self.tokenizer = AutoTokenizer.from_pretrained(tokenizer_name)
-        self.model = FMAPIChatAPIEvalWrapper(model_cfg, self.tokenizer, api_key)
+        model_cfg['api_key'] = api_key
+        self.model = FMAPIChatAPIEvalWrapper(model_cfg, self.tokenizer)
     
     async def evaluate_model(self, prompt: str) -> str:
         """

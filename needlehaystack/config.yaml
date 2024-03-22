@@ -26,16 +26,16 @@ tasks:
 models:
 # -
 #   model_name: "models/gemini-1.0-pro-latest"
-# -
-#   model_name: "claude-3-opus-20240229"
+-
+  model_name: "claude-3-opus-20240229"
 # -
 #   model_name: "claude-3-sonnet-20240229"
 # -
 #   model_name: "claude-3-haiku-20240307"
 # -
 #   model_name: "gpt-4-turbo-preview"
--
-  model_name: "mosaicml/pi-ift-v1"
+# -
+#   model_name: "mosaicml/pi-ift-v1"
 # -
 #   model_name: "gpt-3.5-turbo"
 # -
