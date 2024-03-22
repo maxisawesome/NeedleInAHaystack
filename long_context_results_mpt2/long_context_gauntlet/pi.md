@@ -1,0 +1,35 @@
+| Category   | Benchmark              | Subtask   |   Accuracy | Number few shot   | Model       |
+|:-----------|:-----------------------|:----------|-----------:|:------------------|:------------|
+| 32k        | kv_pairs_end_32k       |           |   0.189    | 0-shot            | mosaicml/pi |
+| 2k         | kv_pairs_beginning_2k  |           |   0.79     | 0-shot            | mosaicml/pi |
+| 2k         | kv_pairs_middle_2k     |           |   0.863333 | 0-shot            | mosaicml/pi |
+| 2k         | kv_pairs_end_2k        |           |   0.86     | 0-shot            | mosaicml/pi |
+| 4k         | kv_pairs_beginning_4k  |           |   0.94     | 0-shot            | mosaicml/pi |
+| 4k         | kv_pairs_middle_4k     |           |   0.966667 | 0-shot            | mosaicml/pi |
+| 4k         | kv_pairs_end_4k        |           |   0.956667 | 0-shot            | mosaicml/pi |
+| 8k         | kv_pairs_beginning_8k  |           |   0.826667 | 0-shot            | mosaicml/pi |
+| 8k         | kv_pairs_middle_8k     |           |   0.87     | 0-shot            | mosaicml/pi |
+| 8k         | kv_pairs_end_8k        |           |   0.85     | 0-shot            | mosaicml/pi |
+| 2k         | wikiqa_2k              |           |   0.654206 | 0-shot            | mosaicml/pi |
+| 4k         | wikiqa_4k              |           |   0.689252 | 0-shot            | mosaicml/pi |
+| 8k         | wikiqa_8k              |           |   0.670561 | 0-shot            | mosaicml/pi |
+| 2k         | hotpotqa_beginning_2k  |           |   0.4005   | 0-shot            | mosaicml/pi |
+| 2k         | hotpotqa_middle_2k     |           |   0.4155   | 0-shot            | mosaicml/pi |
+| 2k         | hotpotqa_end_2k        |           |   0.4      | 0-shot            | mosaicml/pi |
+| 4k         | hotpotqa_beginning_4k  |           |   0.4045   | 0-shot            | mosaicml/pi |
+| 4k         | hotpotqa_middle_4k     |           |   0.403    | 0-shot            | mosaicml/pi |
+| 4k         | hotpotqa_end_4k        |           |   0.4175   | 0-shot            | mosaicml/pi |
+| 8k         | hotpotqa_beginning_8k  |           |   0.2785   | 0-shot            | mosaicml/pi |
+| 8k         | hotpotqa_middle_8k     |           |   0.283    | 0-shot            | mosaicml/pi |
+| 8k         | hotpotqa_end_8k        |           |   0.33     | 0-shot            | mosaicml/pi |
+| 16k        | hotpotqa_beginning_16k |           |   0.177    | 0-shot            | mosaicml/pi |
+| 32k        | hotpotqa_beginning_32k |           |   0.1245   | 0-shot            | mosaicml/pi |
+| 16k        | hotpotqa_middle_16k    |           |   0.1765   | 0-shot            | mosaicml/pi |
+| 32k        | hotpotqa_middle_32k    |           |   0.1365   | 0-shot            | mosaicml/pi |
+| 16k        | hotpotqa_end_16k       |           |   0.2435   | 0-shot            | mosaicml/pi |
+| 32k        | hotpotqa_end_32k       |           |   0.1935   | 0-shot            | mosaicml/pi |
+| 16k        | kv_pairs_beginning_16k |           |   0.175    | 0-shot            | mosaicml/pi |
+| 32k        | kv_pairs_beginning_32k |           |   0.1325   | 0-shot            | mosaicml/pi |
+| 16k        | kv_pairs_middle_16k    |           |   0.1745   | 0-shot            | mosaicml/pi |
+| 32k        | kv_pairs_middle_32k    |           |   0.1395   | 0-shot            | mosaicml/pi |
+| 16k        | kv_pairs_end_16k       |           |   0.243    | 0-shot            | mosaicml/pi |

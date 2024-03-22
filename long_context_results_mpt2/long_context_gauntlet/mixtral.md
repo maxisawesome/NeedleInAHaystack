@@ -1,0 +1,35 @@
+| Category   | Benchmark              | Subtask   |   Accuracy | Number few shot   | Model   |
+|:-----------|:-----------------------|:----------|-----------:|:------------------|:--------|
+|            | kv_pairs_end_32k       |           |   0.1925   | 0-shot            | mixtral |
+|            | kv_pairs_beginning_2k  |           |   0.893333 | 0-shot            | mixtral |
+|            | kv_pairs_middle_2k     |           |   0.93     | 0-shot            | mixtral |
+|            | kv_pairs_end_2k        |           |   0.963333 | 0-shot            | mixtral |
+|            | kv_pairs_beginning_4k  |           |   0.87     | 0-shot            | mixtral |
+|            | kv_pairs_middle_4k     |           |   0.84     | 0-shot            | mixtral |
+|            | kv_pairs_end_4k        |           |   0.876667 | 0-shot            | mixtral |
+|            | kv_pairs_beginning_8k  |           |   0.853333 | 0-shot            | mixtral |
+|            | kv_pairs_middle_8k     |           |   0.83     | 0-shot            | mixtral |
+|            | kv_pairs_end_8k        |           |   0.823333 | 0-shot            | mixtral |
+|            | wikiqa_2k              |           |   0.803738 | 0-shot            | mixtral |
+|            | wikiqa_4k              |           |   0.801402 | 0-shot            | mixtral |
+|            | wikiqa_8k              |           |   0.806075 | 0-shot            | mixtral |
+|            | hotpotqa_beginning_2k  |           |   0.362    | 0-shot            | mixtral |
+|            | hotpotqa_middle_2k     |           |   0.3645   | 0-shot            | mixtral |
+|            | hotpotqa_end_2k        |           |   0.3645   | 0-shot            | mixtral |
+|            | hotpotqa_beginning_4k  |           |   0.343    | 0-shot            | mixtral |
+|            | hotpotqa_middle_4k     |           |   0.3405   | 0-shot            | mixtral |
+|            | hotpotqa_end_4k        |           |   0.3265   | 0-shot            | mixtral |
+|            | hotpotqa_beginning_8k  |           |   0.269    | 0-shot            | mixtral |
+|            | hotpotqa_middle_8k     |           |   0.2735   | 0-shot            | mixtral |
+|            | hotpotqa_end_8k        |           |   0.2685   | 0-shot            | mixtral |
+|            | hotpotqa_beginning_16k |           |   0.1875   | 0-shot            | mixtral |
+|            | hotpotqa_beginning_32k |           |   0.0815   | 0-shot            | mixtral |
+|            | hotpotqa_middle_16k    |           |   0.1945   | 0-shot            | mixtral |
+|            | hotpotqa_middle_32k    |           |   0.143    | 0-shot            | mixtral |
+|            | hotpotqa_end_16k       |           |   0.2165   | 0-shot            | mixtral |
+|            | hotpotqa_end_32k       |           |   0.187    | 0-shot            | mixtral |
+|            | kv_pairs_beginning_16k |           |   0.1835   | 0-shot            | mixtral |
+|            | kv_pairs_beginning_32k |           |   0.0865   | 0-shot            | mixtral |
+|            | kv_pairs_middle_16k    |           |   0.2025   | 0-shot            | mixtral |
+|            | kv_pairs_middle_32k    |           |   0.147    | 0-shot            | mixtral |
+|            | kv_pairs_end_16k       |           |   0.2215   | 0-shot            | mixtral |

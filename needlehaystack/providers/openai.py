@@ -99,11 +99,7 @@ class MosaicML(ModelProvider):
             },
             {
                 "role": "user",
-                "content": context
-            },
-            {
-                "role": "user",
-                "content": f"{retrieval_question} Don't give information outside the document or repeat your findings"
+                "content": context + f"\n{retrieval_question} Don't give information outside the document or repeat your findings"
             }]
     
     def encode_text_to_tokens(self, text: str) -> list[int]:
