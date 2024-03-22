@@ -121,6 +121,14 @@ def main():
 
     for model_cfg in models:
         print(f"Testing model: {model_cfg['model_name']}")
+        model_overrides = list(
+            filter(
+            lambda d: d['model_name'] == model_cfg['model_name'],
+            yaml_cfg['models']
+            )
+        )[0]
+
+        model_cfg.update(model_overrides)
         for idx, task_cfg in enumerate(tasks):
             args = CommandArgs()
             args = args.__dict__
