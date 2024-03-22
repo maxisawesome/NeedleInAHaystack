@@ -91,4 +91,4 @@ class Gemini(ModelProvider):
             str: The decoded text string.
         """
         return self.tokenizer.decode(tokens[:context_length])
-    
+
