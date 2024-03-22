@@ -11,7 +11,6 @@ from omegaconf import OmegaConf  as om
 
 
 os.environ['NIAH_MODEL_API_KEY'] = os.environ.get('OPENAI_API_KEY', '')
-
 os.environ['NIAH_EVALUATOR_API_KEY'] = os.environ.get('OPENAI_API_KEY', '')
 
 
