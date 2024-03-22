@@ -156,14 +156,28 @@ class LLMNeedleHaystackTester:
         test_start_time = time.time()
 
         # Go see if the model can answer the question to pull out your random fact
-        response = await self.model_to_test.evaluate_model(prompt)
+        response = None
+        count = 0
+        while response is None and count < 100:
+            count += 1
+            try:
+                response = await self.model_to_test.evaluate_model(prompt)
+            except:
+                response = None
 
         test_end_time = time.time()
         test_elapsed_time = test_end_time - test_start_time
 
         # Compare the reponse to the actual needle you placed
-        score = self.evaluation_model.evaluate_response(response)
-
+        score = None
+        count = 0
+        while score is None and count < 100:
+            count += 1
+            try:
+                score = self.evaluation_model.evaluate_response(response)
+            except:
+                score = None
+                
         results = {
             # 'context' : context, # Uncomment this line if you'd like to save the context the model was asked to retrieve from. Warning: This will become very large.
             'model' : self.model_name,
