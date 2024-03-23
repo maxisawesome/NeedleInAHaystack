@@ -158,7 +158,7 @@ class LLMNeedleHaystackTester:
         # Go see if the model can answer the question to pull out your random fact
         response = None
         count = 0
-        while response is None and count < 100:
+        while response is None and count < 25:
             count += 1
             try:
                 response = await self.model_to_test.evaluate_model(prompt)
@@ -171,7 +171,7 @@ class LLMNeedleHaystackTester:
         # Compare the reponse to the actual needle you placed
         score = None
         count = 0
-        while score is None and count < 100:
+        while score is None and count < 25:
             count += 1
             try:
                 score = self.evaluation_model.evaluate_response(response)
