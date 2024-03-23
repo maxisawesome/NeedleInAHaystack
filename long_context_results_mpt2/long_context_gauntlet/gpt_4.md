@@ -1,0 +1,35 @@
+| Category   | Benchmark              | Subtask   |   Accuracy | Number few shot   | Model               |
+|:-----------|:-----------------------|:----------|-----------:|:------------------|:--------------------|
+| 32k        | kv_pairs_end_32k       |           |   0.3185   | 0-shot            | gpt-4-turbo-preview |
+| 2k         | kv_pairs_beginning_2k  |           |   0.996667 | 0-shot            | gpt-4-turbo-preview |
+| 2k         | kv_pairs_middle_2k     |           |   0.996667 | 0-shot            | gpt-4-turbo-preview |
+| 2k         | kv_pairs_end_2k        |           |   0.996667 | 0-shot            | gpt-4-turbo-preview |
+| 4k         | kv_pairs_beginning_4k  |           |   0.983333 | 0-shot            | gpt-4-turbo-preview |
+| 4k         | kv_pairs_middle_4k     |           |   0.996667 | 0-shot            | gpt-4-turbo-preview |
+| 4k         | kv_pairs_end_4k        |           |   0.973333 | 0-shot            | gpt-4-turbo-preview |
+| 8k         | kv_pairs_beginning_8k  |           |   0.99     | 0-shot            | gpt-4-turbo-preview |
+| 8k         | kv_pairs_middle_8k     |           |   0.983333 | 0-shot            | gpt-4-turbo-preview |
+| 8k         | kv_pairs_end_8k        |           |   0.98     | 0-shot            | gpt-4-turbo-preview |
+| 2k         | wikiqa_2k              |           |   0.838785 | 0-shot            | gpt-4-turbo-preview |
+| 4k         | wikiqa_4k              |           |   0.845794 | 0-shot            | gpt-4-turbo-preview |
+| 8k         | wikiqa_8k              |           |   0.845794 | 0-shot            | gpt-4-turbo-preview |
+| 2k         | hotpotqa_beginning_2k  |           |   0.389    | 0-shot            | gpt-4-turbo-preview |
+| 2k         | hotpotqa_middle_2k     |           |   0.3765   | 0-shot            | gpt-4-turbo-preview |
+| 2k         | hotpotqa_end_2k        |           |   0.4      | 0-shot            | gpt-4-turbo-preview |
+| 4k         | hotpotqa_beginning_4k  |           |   0.289    | 0-shot            | gpt-4-turbo-preview |
+| 4k         | hotpotqa_middle_4k     |           |   0.2685   | 0-shot            | gpt-4-turbo-preview |
+| 4k         | hotpotqa_end_4k        |           |   0.2965   | 0-shot            | gpt-4-turbo-preview |
+| 8k         | hotpotqa_beginning_8k  |           |   0.2415   | 0-shot            | gpt-4-turbo-preview |
+| 8k         | hotpotqa_middle_8k     |           |   0.2435   | 0-shot            | gpt-4-turbo-preview |
+| 8k         | hotpotqa_end_8k        |           |   0.252    | 0-shot            | gpt-4-turbo-preview |
+| 16k        | hotpotqa_beginning_16k |           |   0.257    | 0-shot            | gpt-4-turbo-preview |
+| 32k        | hotpotqa_beginning_32k |           |   0.2635   | 0-shot            | gpt-4-turbo-preview |
+| 16k        | hotpotqa_middle_16k    |           |   0.254    | 0-shot            | gpt-4-turbo-preview |
+| 32k        | hotpotqa_middle_32k    |           |   0.273    | 0-shot            | gpt-4-turbo-preview |
+| 16k        | hotpotqa_end_16k       |           |   0.2755   | 0-shot            | gpt-4-turbo-preview |
+| 32k        | hotpotqa_end_32k       |           |   0.321    | 0-shot            | gpt-4-turbo-preview |
+| 16k        | kv_pairs_beginning_16k |           |   0.247    | 0-shot            | gpt-4-turbo-preview |
+| 32k        | kv_pairs_beginning_32k |           |   0.272    | 0-shot            | gpt-4-turbo-preview |
+| 16k        | kv_pairs_middle_16k    |           |   0.2495   | 0-shot            | gpt-4-turbo-preview |
+| 32k        | kv_pairs_middle_32k    |           |   0.2595   | 0-shot            | gpt-4-turbo-preview |
+| 16k        | kv_pairs_end_16k       |           |   0.2775   | 0-shot            | gpt-4-turbo-preview |

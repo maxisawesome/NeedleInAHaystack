@@ -5,7 +5,9 @@ import numpy as np
 files = [
     ('mixtral',  'Mixtral-8x7B-Instruct-v0.1'),
     ('pi',  'pi'),
-    ('gpt_3.5', 'gpt-3.5-turbo')
+    ('gpt_3.5', 'gpt-3.5-turbo'),
+    ('gpt_4', 'gpt-4-turbo-preview')
+
 ]
 
 for file_name,model_name in files:

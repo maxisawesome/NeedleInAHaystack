@@ -227,7 +227,6 @@ class OpenAI(ModelProvider):
                 messages=prompt,
                 **self.model_kwargs
             )
-        breakpoint()
         return response.choices[0].message.content
     
     def generate_prompt(self, context: str, retrieval_question: str) -> str | list[dict[str, str]]:
