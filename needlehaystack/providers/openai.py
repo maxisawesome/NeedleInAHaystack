@@ -67,11 +67,10 @@ class MosaicML(ModelProvider):
             prompt[0],
             {
                 "role": "user",
-                "content": f"{prompt[1]}\nQuestion:{prompt[2]}"
+                "content": f"{prompt[1]['content']}\nQuestion:{prompt[2]['content']}"
             }  
         ]
         
-
 
         response = self.model.try_generate_completion(  #
                         messages,
@@ -79,7 +78,6 @@ class MosaicML(ModelProvider):
                         generation_kwargs={
                             "temperature": self.DEFAULT_MODEL_KWARGS.get('temperature', 0.0)
                         })
-        
         return self.model.completion_to_string(response)[0]
     
     def generate_prompt(self, context: str, retrieval_question: str) -> str | list[dict[str, str]]:
@@ -99,7 +97,11 @@ class MosaicML(ModelProvider):
             },
             {
                 "role": "user",
-                "content": context + f"\n{retrieval_question} Don't give information outside the document or repeat your findings"
+                "content": context
+            },
+            {
+                "role": "user",
+                "content": f"{retrieval_question} Don't give information outside the document or repeat your findings"
             }]
     
     def encode_text_to_tokens(self, text: str) -> list[int]:
@@ -225,6 +227,7 @@ class OpenAI(ModelProvider):
                 messages=prompt,
                 **self.model_kwargs
             )
+        breakpoint()
         return response.choices[0].message.content
     
     def generate_prompt(self, context: str, retrieval_question: str) -> str | list[dict[str, str]]:

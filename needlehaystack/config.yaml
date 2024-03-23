@@ -1,32 +1,30 @@
-context_lengths_min: 27000
-context_lengths_max: 30_000
+context_lengths_min: 30_000
+context_lengths_max: 31_000
 context_lengths_num_intervals: 15
 document_depth_percent_min: 0
 document_depth_percent_max: 100
 document_depth_num_intervals: 25
 tasks:
-# -
-#   needle: "The best thing to do in San Francisco is eat a sandwich and sit in Dolores Park on a sunny day."
-#   retrieval_question: "What is the best thing to do in San Francisco?"
+-
+  needle: "The best thing to do in San Francisco is eat a sandwich and sit in Dolores Park on a sunny day."
+  retrieval_question: "What is the best thing to do in San Francisco?"
 -
   needle: "The special magic New York number is 7897."
   retrieval_question: "What is the magic number?"
-# -
-#   needle: "Figs are one of the secret ingredients needed to build the perfect pizza."
-#   retrieval_question: "What is one of the secret ingredients to build the perfect pizza?"
-# -
-#   needle: "Magnus Doofenschmirtz's birthday is 11/14/1997"
-#   retrieval_question: "What is Magnus Doofenschmirtz's birthday?"
-# -
-#   needle: "This essay is derived from a guest lecture in Sam Altman's startup class."
-#   retrieval_question: "Whose startup class was the guest lecture in?"
-#   answer: "Sam Altman's"
+-
+  needle: "Figs are one of the secret ingredients needed to build the perfect pizza."
+  retrieval_question: "What is one of the secret ingredients to build the perfect pizza?"
+-
+  needle: "Magnus Doofenschmirtz's birthday is 11/14/1997"
+  retrieval_question: "What is Magnus Doofenschmirtz's birthday?"
+-
+  needle: "This essay is derived from a guest lecture in Sam Altman's startup class."
+  retrieval_question: "Whose startup class was the guest lecture in?"
+  answer: "Sam Altman's"
 
 models:
 -
-  model_name: "models/gemini-1.0-pro-latest"
-# -
-#   model_name: "claude-3-opus-20240229"
+  model_name: "claude-3-opus-20240229"
 # -
 #   model_name: "claude-3-sonnet-20240229"
 # -
