@@ -2,7 +2,7 @@ import tiktoken
 import google.generativeai as google_genai
 from typing import Optional
 from .model import ModelProvider
-
+import os
 
 
 
@@ -17,7 +17,12 @@ class Gemini(ModelProvider):
                  api_key: Optional[str] = None):
         self.model_name = model_name
         self.model_kwargs = model_kwargs
+        if api_key is None:
+            api_key = os.getenv('GEMINI_API_KEY')
+        if (not api_key):
+            raise ValueError("GEMINI_API_KEY must be in env.")
         self.api_key = api_key
+
         google_genai.configure(api_key=api_key)
         self.tokenizer = tiktoken.encoding_for_model("gpt-3.5-turbo-0125") # the precise tokenizer is irrelevant
         self.model = google_genai.GenerativeModel(model_name)
