@@ -96,6 +96,8 @@ def main():
                 # 'version': "databricks-dbrx-instruct",
                 'base_url': 'https://e2-dogfood.staging.cloud.databricks.com/serving-endpoints',
                 'local': False,
+                'tokenizer_name': 'mosaicml/mpt-7b',
+                'output_directory': "results/mosaicml/pi-ift-v1"
             },
             {
                 'provider': 'openai',
