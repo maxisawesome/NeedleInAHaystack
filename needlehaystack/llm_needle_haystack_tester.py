@@ -158,13 +158,16 @@ class LLMNeedleHaystackTester:
         # Go see if the model can answer the question to pull out your random fact
         response = None
         count = 0
+        exception = None
         while response is None and count < 25:
             count += 1
             try:
                 response = await self.model_to_test.evaluate_model(prompt)
-            except:
+            except Exception as e:
                 response = None
-
+                exception = e
+        if response is None:
+            print(f"Failed to generate response: {exception.message}")
         test_end_time = time.time()
         test_elapsed_time = test_end_time - test_start_time
 
@@ -175,8 +178,11 @@ class LLMNeedleHaystackTester:
             count += 1
             try:
                 score = self.evaluation_model.evaluate_response(response)
-            except:
-                score = None
+            except Exception as e:
+                response = None
+                exception = e
+        if response is None:
+            print(f"Failed to generate score: {exception.message}")
                 
         results = {
             # 'context' : context, # Uncomment this line if you'd like to save the context the model was asked to retrieve from. Warning: This will become very large.
