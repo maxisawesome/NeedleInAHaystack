@@ -93,7 +93,7 @@ def main():
             {
                 'provider': 'mosaicml',
                 'model_name': "databricks-dbrx-instruct",
-                'version': "databricks-dbrx-instruct",
+                # 'version': "databricks-dbrx-instruct",
                 'base_url': 'https://e2-dogfood.staging.cloud.databricks.com/serving-endpoints',
                 'local': False,
             },
