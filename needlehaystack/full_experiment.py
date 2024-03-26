@@ -91,6 +91,13 @@ def main():
                 'output_directory': "results/mosaicml/pi-ift-v1"
             },
             {
+                'provider': 'mosaicml',
+                'model_name': "databricks-dbrx-instruct",
+                'version': "databricks-dbrx-instruct",
+                'base_url': 'https://e2-dogfood.staging.cloud.databricks.com/serving-endpoints',
+                'local': False,
+            },
+            {
                 'provider': 'openai',
                 'model_name': "gpt-3.5-turbo",
                 'output_directory': "results/openai/gpt-3.5-turbo",
